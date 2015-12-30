@@ -37,8 +37,6 @@ public class Application extends Controller {
 public Result addPerson(){
         Registration reg=Form.form(Registration.class).bindFromRequest().get();     
         reg.save();
-       
-       
        return redirect(routes.Application.success());
        
    }
@@ -116,7 +114,6 @@ public Result changepass(){
 	 while(itr.hasNext())
 	    {
 	        reg1=itr.next();
-	       
 	        if(pass.equals(reg1.getPassword()))
 	        {
 	           reg1.setPassword(newpass);
