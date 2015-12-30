@@ -1,0 +1,33 @@
+   @(message: String)
+   <center>@message</center>
+    <form action="@routes.Application.driverreg()" method="post"  encrypte="multipart/form-data">
+    <table>
+    <tr>
+     <td>Driver Name</td>
+    <td>
+     <input type="text"  name="name" required="required">
+     </td>
+         <tr>
+     <td>Driver mobile</td>
+    <td>
+     <input type="text"  name="mobileno" required="required">
+     </td>
+     </tr>
+     </tr>
+    <tr>
+    <td>driver image</td>
+    <td>
+     <input type="file" name="filename"  required="required">
+     </td>
+     </tr>
+    <tr>
+    <td> driver available  </td>
+    <td>
+    <input type="radio" name="available" value="true" checked>yes
+    <br>
+    <input type="radio" name="available" value="false">no
+    </td>
+    </tr> 
+    </table>
+     <button input type="submit" value="submit" >submit</button>
+    </form>

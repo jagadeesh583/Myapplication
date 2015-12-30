@@ -1,0 +1,91 @@
+@(message: String)
+
+@main("Welcome to Play") {
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" media="screen"
+                            href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+           <script type="text/javascript"
+           src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+          </script>
+              <script type="text/javascript"
+               src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+                  </script>
+              <script type="text/javascript"
+               src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+              </script>
+              <script type="text/javascript"
+                   src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+                  </script>
+                    <script type="text/javascript">
+                    $(function() {
+                  $('#datetimepicker3').datetimepicker({
+                pickDate: false
+               
+                      });
+                 $('#datetimepicker4').datetimepicker({                      pickTime: false,
+                      startDate: '-2m',
+                      endDate: '+2d'
+                     
+                     
+                    });
+                });
+           </script>
+</head>
+<body>
+@message
+<center>
+<form action="@routes.Application.book()" method="post">
+   <h4>Source</h4>
+  <select name="source"   required="required">
+    <option value="hyderabad">Hyderabad</option>
+    <option value="gachibowli">Gachiboeli</option>
+    <option value="sr nagar">SR Nagar</option>
+    <option value="Secunderabad">Secendrabad</option>
+  </select>
+  <br><br>
+  <h4>destination</h4>
+  <select name="destination"  required="required">
+    <option value="hyderabad">Hyderabad</option>
+    <option value="gachibowli">Gachiboeli</option>
+    <option value="sr nagar">SR Nagar</option>
+    <option value="Secunderabad">Secunderabad</option>
+  </select>
+  <br><br>
+  <h4>select cab type </h4>
+    <select name="cabtype"  required="required">
+    <option value="4">4 members</option>
+    <option value="6">6 members</option>
+  </select><br>
+ <tr><td> Time :</td><td><div class="well">
+                                                         <div id="datetimepicker3" class="input-append">
+                                                           <input data-format="hh:mm:ss" type="text" name="time" required="required"></input>
+                                                           <span class="add-on">
+                                                             <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                                                             </i>
+                                                           </span>
+                                                         </div>
+                                                   </div>
+                           </td></tr>
+                      <tr><td>Date :</td><td>
+                      <div class="well">
+                                 <div id="datetimepicker4" class="input-append">
+                                   <input data-format="yyyy-MM-dd" type="text" name="date" required="required"></input>
+                                   <span class="add-on">
+                                     <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                                     </i>
+                                   </span>
+                                 </div>
+                               </div>
+                      </td></tr>
+  <input type="submit" value="Book" >
+  </center>
+</form>
+</body>
+</html>
+
+
+
+}

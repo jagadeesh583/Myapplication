@@ -1,0 +1,11 @@
+@(message: String)
+
+@main("Welcome to Play") {
+ <center>
+ @message
+ <form action="@routes.Application.index()" method="get">
+    <button input type="submit" value="submit">home page</button>
+    </form>
+</center> 
+ 
+}

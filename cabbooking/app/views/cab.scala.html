@@ -1,0 +1,11 @@
+@(message: String)
+@main("Welcome to Play") {  
+ <center><h1>Enter cab Details</h1></center>
+    <center>
+   <form action="@routes.Application.cab()" method="post">
+    cab type<input type="text"  name="cabtype" required="required"><br>
+    cab no.<input type="text"   name="cabnumber" required="required"><br>
+    <button input type="submit" value="Submit"> submit </button>>
+   </form>
+</center>
+}

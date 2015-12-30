@@ -1,0 +1,43 @@
+@(message: String)
+
+@main("Welcome to Play") {
+	@message
+	<html>
+	<head>
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   </head>
+
+ <!-- <center>
+ <form action="@routes.Application.driver()" method="get">
+    <button>
+    <input type="submit" value="driver_registration"></button>
+    </form>
+</center> -->
+ <center>
+ <form action="@routes.Application.cust()" method="get">
+    <button type="submit" class="btn btn-danger">Customer_registation</button>
+    </form>
+   </center>
+   <br>
+   <br>
+   <br>
+  <center>
+    <form action="@routes.Application.login()" method="get">
+    <button type="submit" class="btn btn-info"> Login if you are reg   </button>
+    </form>
+</center>  
+
+
+<!--  
+ <center>
+    <form action="@routes.Application.cabdetails()" method="get">
+    <button>
+    <input type="submit" value="cab details"></button>
+    </form>
+</center> --> 
+</html>
+}

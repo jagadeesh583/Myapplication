@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /regdriver                          controllers.Application.driver()
+GET     /regcust                          controllers.Application.cust()
+GET     /custlogin                          controllers.Application.login()
+GET     /cab                                controllers.Application.cabdetails()
+GET     /booking                            controllers.Application.bookingdetails()
+POST    /cabdetails                         controllers.Application.cab()
+POST    /driver                             controllers.Application.driverreg()
+POST    /custreg                            controllers.Application.custreg()
+POST    /cust_login                            controllers.Application.logincust()
+POST    /booking                              controllers.Application.book()
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
