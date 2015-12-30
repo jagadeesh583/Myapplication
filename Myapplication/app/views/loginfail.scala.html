@@ -1,0 +1,16 @@
+
+@(message: String)
+@main("Welcome to Play") {
+    
+    
+    <center>
+    @message
+    <h>User Name or password wrong</h>
+    <form action="@routes.Application.login()" method="get">
+      <table>
+   <tr><td></td><td><button type="submit">try again</button></td></tr>
+   </form>
+   </table>
+   </center>
+    
+}

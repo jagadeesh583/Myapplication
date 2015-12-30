@@ -1,0 +1,23 @@
+@(al:List[Registration])
+<center>
+<h1>welcome user</h1><form action="@routes.Application.logout()" method="get"><button type="submit">logout</button></form>
+<table BORDER=6 CELLSPACING=6 CELLPADDING=6>
+<tr><th>Person ID</th><th>Person Name</th><th>City</th><th>State</th><th>Country</th></tr>
+@for(p <- al){
+   <tr><td>@p.getId()</td><td>@p.getName</td><td>@p.getCity</td><td>@p.getState</td><td>@p.getCountry</td></tr>
+ 
+}
+   
+</table></center>
+<center>
+<h4> want to change password</h4>
+<form action="@routes.Application.changepass()" method="post">
+<table>
+    <tr><td>old password</td><td><input type="password" name="oldpassword"/></td></tr>
+    <tr><td>new Password</td><td><input type="password" name="newpassword"/></td></tr>
+   
+       <tr><td><button type="submit">change my password</button></td></tr>
+   </table>
+    </form>
+
+</center>
